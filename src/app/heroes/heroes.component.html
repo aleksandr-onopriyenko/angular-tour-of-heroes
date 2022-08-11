@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <mat-card *ngFor="let hero of heroes" [matTooltip]="hero.name.length > 15 ? hero.name : ''" class="hero-card"
+            matTooltipPosition="above">
+    <mat-card-header style="width: 100%;">
+      <mat-card-title class="hero-card__title"
+      >{{ hero.name }}</mat-card-title>
+    </mat-card-header>
+    <img [alt]="hero.name" [src]="hero.img" class="hero-card__image" mat-card-image>
+    <mat-card-content>
+      <div><span>id: </span>{{ hero.id }}</div>
+      <div><span>Name: </span>{{ hero.name }}</div>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <app-hero-dialog [hero]="hero"></app-hero-dialog>
+    </mat-card-actions>
+  </mat-card>
+</div>

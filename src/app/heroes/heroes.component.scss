@@ -1,0 +1,35 @@
+.hero-card {
+  overflow: hidden;
+  width: 200px;
+  margin-bottom: 1rem;
+
+  &__image {
+    height: 200px;
+  }
+
+  &__title {
+    max-width: 160px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mat-form-field {
+  width: 100%;
+
+  .mat-form-field .mat-form-field-infix {
+    padding: 0.2em 0 !important;
+  }
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.2rem 0;
+}

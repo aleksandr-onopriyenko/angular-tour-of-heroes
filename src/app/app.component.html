@@ -1,21 +1,20 @@
-<mat-drawer-container class="example-container">
+<mat-toolbar class="mat-toolbar" color="primary">
+  <button (click)="drawer.toggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span style="margin-left: 2rem;">{{ title }}</span>
+</mat-toolbar>
+<mat-drawer-container class="mat-drawer-container">
 
-  <mat-drawer #drawer class="example-sidenav" mode="push">
+  <mat-drawer #drawer class="mat-drawer-side" mode="side">
     <mat-nav-list>
-      <mat-list-item>Home</mat-list-item>
-      <mat-list-item>About</mat-list-item>
-      <mat-list-item>FAQ</mat-list-item>
+      <router-outlet></router-outlet>
     </mat-nav-list>
   </mat-drawer>
+  <mat-drawer-content>
+    <div class="container">
+      <app-heroes (click)="drawer.open()"></app-heroes>
+    </div>
+  </mat-drawer-content>
 
-  <mat-toolbar color="accent">
-    <button (click)="drawer.toggle()" mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span style="margin-left: 2rem;">{{ title }}</span>
-  </mat-toolbar>
-
-  <div class="container">
-    <app-heroes></app-heroes>
-  </div>
 </mat-drawer-container>

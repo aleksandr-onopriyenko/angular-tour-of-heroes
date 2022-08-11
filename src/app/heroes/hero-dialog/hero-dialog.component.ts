@@ -42,7 +42,7 @@ export class DialogDataExampleDialog implements OnInit {
   }
 
   onSave() {
-    this.heroesDataMock.updateHeroes(this.hero, true)
+    this.heroesDataMock.updateHeroes(this.hero)
   }
 }
 

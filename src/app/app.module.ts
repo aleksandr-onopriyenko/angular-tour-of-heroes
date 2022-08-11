@@ -19,13 +19,16 @@ import {DialogDataExampleDialog, HeroDialogComponent} from "./heroes/hero-dialog
 import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {HeroesDataMock} from "./shared/heroes-data.mock";
+import {HeroDetailComponent} from './heroes/hero-detail/hero-detail.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDialogComponent,
-    DialogDataExampleDialog
+    DialogDataExampleDialog,
+    HeroDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import {HeroesDataMock} from "./shared/heroes-data.mock";
     MatIconModule,
     MatListModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [HeroesDataMock],
   bootstrap: [AppComponent]

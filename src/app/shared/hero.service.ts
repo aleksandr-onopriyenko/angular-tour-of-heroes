@@ -3,6 +3,7 @@ import {Hero} from "./hero";
 import {Observable, of} from "rxjs";
 import {HEROES} from "./heroes-data.mock";
 import {Router} from "@angular/router";
+import {MessageService} from "./message.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,14 +11,16 @@ import {Router} from "@angular/router";
 export class HeroService {
   heroes: Hero[] = HEROES
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private messageService: MessageService) {
   }
 
   getHeroes(): Observable<Hero[]> {
+    this.messageService.openSnackBar('HeroService: fetched heroes')
     return of(this.heroes)
   }
 
   getHero(id: number): Observable<Hero> {
+    this.messageService.openSnackBar(`HeroesComponent: Selected hero id=${id}`)
     return of(this.heroes.find((h) => h.id === id)!)
   }
 

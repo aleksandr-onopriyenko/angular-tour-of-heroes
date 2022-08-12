@@ -20,7 +20,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {HeroDetailComponent} from './heroes/hero-detail/hero-detail.component';
 import {HttpClientModule} from "@angular/common/http";
-import { HeroHostDetailComponent } from './heroes/hero-host-detail/hero-host-detail.component';
+import {HeroHostDetailComponent} from './heroes/hero-host-detail/hero-host-detail.component';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { HeroHostDetailComponent } from './heroes/hero-host-detail/hero-host-det
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule {

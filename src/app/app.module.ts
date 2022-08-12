@@ -18,9 +18,9 @@ import {MatListModule} from "@angular/material/list";
 import {DialogDataExampleDialog, HeroDialogComponent} from "./heroes/hero-dialog/hero-dialog.component";
 import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
-import {HeroesDataMock} from "./shared/heroes-data.mock";
 import {HeroDetailComponent} from './heroes/hero-detail/hero-detail.component';
 import {HttpClientModule} from "@angular/common/http";
+import { HeroHostDetailComponent } from './heroes/hero-host-detail/hero-host-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import {HttpClientModule} from "@angular/common/http";
     HeroDialogComponent,
     DialogDataExampleDialog,
     HeroDetailComponent,
+    HeroHostDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,7 @@ import {HttpClientModule} from "@angular/common/http";
     FormsModule,
     HttpClientModule
   ],
-  providers: [HeroesDataMock],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

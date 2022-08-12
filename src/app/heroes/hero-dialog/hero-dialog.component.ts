@@ -1,15 +1,9 @@
 import {Component, Inject, Input, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import {Hero} from "../../shared/hero";
-import {HeroesDataMock} from "../../shared/heroes-data.mock";
+import {HeroService} from "../../shared/hero.service";
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
 
-/**
- * @title Injecting data when opening a dialog
- */
 @Component({
   selector: 'app-hero-dialog',
   template: `
@@ -28,13 +22,12 @@ export class HeroDialogComponent {
 
 @Component({
   selector: 'dialog-data-example-dialog',
-  templateUrl: 'hero-dialog.component.html',
-  providers: [HeroesDataMock]
+  templateUrl: 'hero-dialog.component.html'
 })
 export class DialogDataExampleDialog implements OnInit {
   hero!: Hero
 
-  constructor(private heroesDataMock: HeroesDataMock, @Inject(MAT_DIALOG_DATA) public data: Hero) {
+  constructor(private heroesDataMock: HeroService, @Inject(MAT_DIALOG_DATA) public data: Hero) {
   }
 
   ngOnInit() {
@@ -42,7 +35,7 @@ export class DialogDataExampleDialog implements OnInit {
   }
 
   onSave() {
-    this.heroesDataMock.updateHeroes(this.hero)
+    this.heroesDataMock.updateHero(this.hero)
   }
 }
 

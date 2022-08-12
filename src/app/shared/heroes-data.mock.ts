@@ -1,8 +1,4 @@
-import {Hero} from "./hero";
-import {Observable, of} from "rxjs";
-import {Injectable} from "@angular/core";
-
-const HEROES: any[] = [
+export const HEROES: any[] = [
   {
     "id": 1,
     "name": "Spider-Man",
@@ -601,23 +597,3 @@ const HEROES: any[] = [
     "description": "Spider-Girl or Spidergirl may refer to: \n\nAnya Corazon, a Marvel Comics Latina superhero who originally called herself Araña.\nAshley Barton, a Marvel Comics supervillain and granddaughter of Spider-Man Peter Parker and daughter of Clint Barton from the Marvel's Wastelanders universe.\nMayday Parker, a Marvel Comics superhero and daughter of Spider-Man Peter Parker and Mary Jane Watson from the MC2 (Marvel Comics 2) universe.\nPetra Parker, an alternate universe superhero who appears in the Marvel Animation animated series Ultimate Spider-Man: Web-Warriors, voiced by Olivia Holt.\nSpider Girl (Sussa Paka), a DC Comics superhero"
   }
 ]
-const url = 'https://en.wikipedia.org/w/api.php?origin=*&format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles='
-
-@Injectable()
-export class HeroesDataMock {
-  heroes: Hero[] = HEROES
-
-  getHeroes(): Observable<Hero[]> {
-    return of(this.heroes)
-  }
-
-  getHero(id: number): Hero {
-    return this.heroes.find(i => i.id === id)!
-  }
-
-  updateHeroes(hero: Hero) {
-    this.heroes.splice(this.heroes.findIndex((item) => item.id === hero.id), 1)
-    this.heroes.push({id: hero.id, name: hero.name, img: hero.img})
-    this.heroes.sort((a, b) => a.id - b.id)
-  }
-}

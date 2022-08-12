@@ -1,0 +1,14 @@
+<mat-card *ngIf="hero" class="example-card" style="width: 300px">
+  <mat-card-title-group>
+    <mat-card-title>{{hero.name}}</mat-card-title>
+    <mat-card-subtitle>Marvel SuperHero</mat-card-subtitle>
+    <img [alt]="hero.name" [src]="hero.img" class="hero-card__image" mat-card-sm-image>
+  </mat-card-title-group>
+  <mat-card-content class="description">
+    {{hero.description}}
+  </mat-card-content>
+  <mat-card-actions>
+    <app-hero-dialog [hero]="hero"></app-hero-dialog>
+  </mat-card-actions>
+</mat-card>
+

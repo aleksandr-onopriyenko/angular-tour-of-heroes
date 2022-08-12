@@ -1,9 +1,9 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {HeroDetailComponent} from "./heroes/hero-detail/hero-detail.component";
+import {HeroHostDetailComponent} from "./heroes/hero-host-detail/hero-host-detail.component";
 
 const routes: Routes = [
-  {path: ':id', component: HeroDetailComponent},
+  {path: ':id', component: HeroHostDetailComponent},
 ];
 
 @NgModule({

@@ -41,19 +41,18 @@ export class DialogDataExampleDialog implements OnInit {
 
   onSave() {
     if (!this.hero.id) {
-      if (this.hero.name && this.hero.img) {
-        this.heroService.addHero(this.hero).subscribe()
-        this.router.navigate(['/heroes']).then()
-      }
+      this.heroService.addHero(this.hero).subscribe(() => this.navigateOnSave())
       return
     }
     if (this.hero) {
-      this.heroService.updateHero(this.hero).subscribe(
-        () => {
-          this.router.navigate(['/heroes']).then()
-        }
-      )
+      this.heroService.updateHero(this.hero).subscribe(() => this.navigateOnSave())
     }
+  }
+
+  private navigateOnSave() {
+    this.router.navigate(['/']).then(() => {
+      this.router.navigate(['/heroes']).then()
+    })
   }
 }
 

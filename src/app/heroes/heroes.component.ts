@@ -16,19 +16,17 @@ export class HeroesComponent implements OnInit {
   // @ts-ignore
   @ViewChild(MatSidenav) sidenav;
 
-  constructor(public heroesDataMock: HeroService,
+  constructor(public heroService: HeroService,
               private router: Router,
               private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.route.url.subscribe(() => {
-      this.isShown = this.heroesDataMock.getIsHeroDetail()
+      this.isShown = this.heroService.getIsHeroDetail()
     })
 
-    this.heroesDataMock.getHeroes().subscribe(res => {
-      this.heroes = res
-    })
+    this.heroes = this.heroService.heroes
 
   }
 

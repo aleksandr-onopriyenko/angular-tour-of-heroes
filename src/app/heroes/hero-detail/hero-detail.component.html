@@ -11,9 +11,7 @@
     {{hero.description}}
   </mat-card-content>
   <mat-card-actions>
-    <app-hero-dialog [hero]="hero"></app-hero-dialog>
+    <app-hero-dialog [hero]="hero">Edit Hero</app-hero-dialog>
+    <button (click)="delete(hero)" color="warn" mat-button>Delete</button>
   </mat-card-actions>
 </mat-card>
-
-
-<div *ngIf="!hero">Choose Your Hero</div>

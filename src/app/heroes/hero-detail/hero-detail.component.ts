@@ -18,13 +18,21 @@ export class HeroDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(res => {
-      this.hero = this.heroesService.getHero(+res['id'])
+    this.route.params.subscribe(param => {
+      const id = +param['id']
+      this.heroesService.getHero(id).subscribe(hero => {
+        this.hero = hero
+      })
     })
   }
 
   goBack() {
     this.heroesService.isHeroDetail = this.location.isCurrentPathEqualTo('/heroes');
+    this.location.back()
+  }
+
+  delete(hero: Hero) {
+    this.heroesService.deleteHero(hero).subscribe()
     this.location.back()
   }
 

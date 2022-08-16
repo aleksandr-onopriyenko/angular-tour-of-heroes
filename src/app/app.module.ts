@@ -25,6 +25,9 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {HomeComponent} from './home/home.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
+import {InMemoryDataService} from "./shared/in-memory-data.service";
+import {TopHeroComponent} from './heroes/top-hero/top-hero.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,7 @@ import {NavbarComponent} from './navbar/navbar.component';
     HomeComponent,
     PageNotFoundComponent,
     NavbarComponent,
+    TopHeroComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,9 @@ import {NavbarComponent} from './navbar/navbar.component';
     FormsModule,
     HttpClientModule,
     MatTabsModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [MatSnackBar, MatSidenav, MatSidenavContainer],
   bootstrap: [AppComponent]

@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {Observable, of} from "rxjs";
 import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition} from "@angular/material/snack-bar";
 
 @Injectable({
@@ -11,15 +10,6 @@ export class MessageService {
   messages: string[] = []
 
   constructor(private _snackBar: MatSnackBar) {
-  }
-
-  getMessages(): Observable<string[]> {
-    return of(this.messages)
-  }
-
-  add(message: string) {
-    this.messages.splice(0, 1)
-    this.messages.push(message)
   }
 
   clear() {

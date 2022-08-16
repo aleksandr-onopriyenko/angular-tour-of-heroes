@@ -3,6 +3,7 @@
   <div>
     <ng-content></ng-content>
     <span style="margin-left: 2rem;">Tour of Heroes</span>
+    <ng-content select="div.search"></ng-content>
   </div>
   <div>
     <a (click)="click()" mat-button routerLink="/heroes">Heroes</a>

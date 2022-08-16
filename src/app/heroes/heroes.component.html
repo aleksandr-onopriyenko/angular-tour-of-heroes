@@ -14,8 +14,11 @@
       </mat-list-option>
     </mat-selection-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <div *ngIf="isShown" class="choose-hero mat-h1">Choose Your Hero</div>
+  <mat-sidenav-content style="margin-left: 312px;">
+    <div *ngIf="isShown" class="choose-hero">
+      <div class="mat-h1" style="margin: 0 1rem 0 0;">Choose Your Hero or</div>
+      <app-hero-dialog>Add New Hero</app-hero-dialog>
+    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

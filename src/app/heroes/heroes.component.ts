@@ -25,9 +25,7 @@ export class HeroesComponent implements OnInit {
     this.route.url.subscribe(() => {
       this.isShown = this.heroService.getIsHeroDetail()
     })
-
     this.heroes = this.heroService.heroes
-
   }
 
   onSelect(id: number) {

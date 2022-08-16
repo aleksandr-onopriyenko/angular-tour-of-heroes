@@ -2,7 +2,7 @@ import {Component, Inject, Input, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import {Hero} from "../../shared/hero";
 import {HeroService} from "../../shared/hero.service";
-import {Location} from "@angular/common";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -32,7 +32,7 @@ export class DialogDataExampleDialog implements OnInit {
 
   constructor(private heroService: HeroService,
               @Inject(MAT_DIALOG_DATA) public data: Hero,
-              private location: Location) {
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -43,12 +43,15 @@ export class DialogDataExampleDialog implements OnInit {
     if (!this.hero.id) {
       if (this.hero.name && this.hero.img) {
         this.heroService.addHero(this.hero).subscribe()
+        this.router.navigate(['/heroes']).then()
       }
       return
     }
     if (this.hero) {
       this.heroService.updateHero(this.hero).subscribe(
-        () => this.location.back()
+        () => {
+          this.router.navigate(['/heroes']).then()
+        }
       )
     }
   }

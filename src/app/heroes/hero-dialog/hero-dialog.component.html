@@ -1,0 +1,28 @@
+<div style="width: 400px">
+  <h1 mat-dialog-title>Edit Hero</h1>
+  <div mat-dialog-content style="display:flex;flex-direction: column;">
+    <mat-form-field appearance="standard">
+      <mat-label>Hero ID</mat-label>
+      <input [(ngModel)]="hero.id" [value]="hero.id + ''" disabled matInput type="number">
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Hero name</mat-label>
+      <input [(ngModel)]="hero.name" [value]="hero.name" matInput required>
+    </mat-form-field>
+    <mat-form-field appearance="standard">
+      <mat-label>Hero img url</mat-label>
+      <input [(ngModel)]="hero.img" [value]="hero.img" matInput required>
+    </mat-form-field>
+    <mat-form-field appearance="standard" class="example-full-width">
+      <mat-label>Hero description</mat-label>
+      <textarea [(ngModel)]="hero.description" [value]="hero.description" matInput placeholder="Enter Hero biography.."
+                rows="10"></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close="true">Close</button>
+    <button (click)="onSave()" [disabled]="!(hero.img && hero.name)" [mat-dialog-close]="true" mat-button>Save
+    </button>
+  </div>
+</div>
+

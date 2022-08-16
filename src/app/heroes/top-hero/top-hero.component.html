@@ -1,0 +1,10 @@
+<h1>Top Of Heroes</h1>
+<mat-list>
+  <mat-list-item *ngFor="let hero of heroes" [routerLink]="['/heroes', hero.id]" class="mat-menu-item"
+                 style="cursor:pointer;">
+    <div matLine>{{hero.name}}</div>
+    <div mat-list-avatar>
+      <img [alt]="hero.name" [src]="hero.img" matListAvatar>
+    </div>
+  </mat-list-item>
+</mat-list>

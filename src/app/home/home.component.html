@@ -1,0 +1,26 @@
+<app-navbar>
+  <div class="search">
+    <input #searchBox (input)="search(searchBox.value)" id="search-box" placeholder="Enter heroes name..."
+           type="search">
+  </div>
+</app-navbar>
+
+<div class="container">
+  <div style="margin-top: 80px;">
+    <app-top-hero></app-top-hero>
+  </div>
+
+  <div id="search-component" style="margin-top: 2rem;">
+    <h2 *ngIf="heroes$ | async">Searching result</h2>
+    <mat-list>
+      <mat-list-item *ngFor="let hero of heroes$ | async" [routerLink]="['/heroes', hero.id]" class="mat-menu-item"
+                     style="cursor:pointer;">
+        <div matLine>{{hero.name}}</div>
+        <div mat-list-avatar>
+          <img [alt]="hero.name" [src]="hero.img" matListAvatar>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<app-navbar>
+  <button (click)="sidenav.toggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+</app-navbar>
+
+<mat-sidenav-container class="mat-drawer-side"
+                       style="width: 100%;">
+  <mat-sidenav class="mat-drawer-container" mode="side" opened>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="onSelect(hero.id);" *ngFor="let hero of heroes"
+                       [value]="hero.name">
+        {{hero.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-sidenav>
+  <mat-sidenav-content style="margin-left: 312px;">
+    <div *ngIf="isShown" class="choose-hero">
+      <div class="mat-h1" style="margin: 0 1rem 0 0;">Choose Your Hero or</div>
+      <app-hero-dialog>Add New Hero</app-hero-dialog>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

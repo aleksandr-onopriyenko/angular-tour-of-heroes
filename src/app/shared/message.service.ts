@@ -6,7 +6,7 @@ import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition}
   providedIn: 'root'
 })
 export class MessageService {
-  horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
   messages: string[] = []
 
@@ -27,7 +27,7 @@ export class MessageService {
   }
 
   openSnackBar(message: string) {
-    this._snackBar.open(message, 'Splash', {
+    this._snackBar.open(message, 'Close', {
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
       duration: 3000

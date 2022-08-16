@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from "@angular/material/button";
 import {HeroesComponent} from './heroes/heroes.component';
-import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatSidenav, MatSidenavContainer, MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatGridListModule} from "@angular/material/grid-list";
@@ -20,8 +20,11 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {FormsModule} from "@angular/forms";
 import {HeroDetailComponent} from './heroes/hero-detail/hero-detail.component';
 import {HttpClientModule} from "@angular/common/http";
-import {HeroHostDetailComponent} from './heroes/hero-host-detail/hero-host-detail.component';
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatTabsModule} from "@angular/material/tabs";
+import {HomeComponent} from './home/home.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     HeroDialogComponent,
     DialogDataExampleDialog,
     HeroDetailComponent,
-    HeroHostDetailComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,9 +53,10 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     MatListModule,
     MatDialogModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTabsModule,
   ],
-  providers: [MatSnackBar],
+  providers: [MatSnackBar, MatSidenav, MatSidenavContainer],
   bootstrap: [AppComponent]
 })
 export class AppModule {

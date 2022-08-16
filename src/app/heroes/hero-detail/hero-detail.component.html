@@ -1,8 +1,11 @@
-<mat-card *ngIf="hero" class="example-card" style="width: 300px">
+<button (click)="goBack()" color="accent" mat-raised-button type="button">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+<mat-card *ngIf="hero" class="example-card" style="max-width: 600px; margin: 1rem;">
   <mat-card-title-group>
     <mat-card-title>{{hero.name}}</mat-card-title>
     <mat-card-subtitle>Marvel SuperHero</mat-card-subtitle>
-    <img [alt]="hero.name" [src]="hero.img" class="hero-card__image" mat-card-sm-image>
+    <img [alt]="hero.name" [src]="hero.img" class="hero-card__image" mat-card-md-image>
   </mat-card-title-group>
   <mat-card-content class="description">
     {{hero.description}}
@@ -12,3 +15,5 @@
   </mat-card-actions>
 </mat-card>
 
+
+<div *ngIf="!hero">Choose Your Hero</div>

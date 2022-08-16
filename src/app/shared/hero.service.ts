@@ -4,14 +4,23 @@ import {Observable, of} from "rxjs";
 import {HEROES} from "./heroes-data.mock";
 import {Router} from "@angular/router";
 import {MessageService} from "./message.service";
+import {Location} from "@angular/common";
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
   heroes: Hero[] = HEROES
+  isHeroDetail = true
 
-  constructor(private router: Router, private messageService: MessageService) {
+  constructor(private router: Router,
+              private messageService: MessageService,
+              private location: Location) {
+  }
+
+  getIsHeroDetail(): boolean {
+    this.isHeroDetail = this.location.isCurrentPathEqualTo('/heroes');
+    return this.isHeroDetail
   }
 
   getHeroes(): Observable<Hero[]> {
@@ -19,9 +28,9 @@ export class HeroService {
     return of(this.heroes)
   }
 
-  getHero(id: number): Observable<Hero> {
+  getHero(id: number): Hero {
     this.messageService.openSnackBar(`HeroesComponent: Selected hero id=${id}`)
-    return of(this.heroes.find((h) => h.id === id)!)
+    return this.heroes.find((h) => h.id === id)!
   }
 
   setHero(hero: Hero): void {
@@ -32,10 +41,10 @@ export class HeroService {
     this.heroes.splice(this.heroes.findIndex((h: Hero) => h.id === hero.id), 1)
     this.heroes.push(hero)
     this.heroes.sort((a, b) => a.id - b.id)
-    this.router.navigate(['']).then()
   }
 
   deleteHero(id: number): void {
     this.heroes.splice(this.heroes.findIndex((h: Hero) => h.id === id), 1)
   }
+
 }

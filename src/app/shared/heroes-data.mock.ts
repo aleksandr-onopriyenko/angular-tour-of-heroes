@@ -69,7 +69,7 @@ export const HEROES: any[] = [
     "id": 12,
     "name": "Black Widow",
     "img": "https://imgix.ranker.com/user_node_img/137/2725051/original/black-widow-comic-book-characters-photo-u9?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Black widow may refer to:\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 13,
@@ -135,25 +135,25 @@ export const HEROES: any[] = [
     "id": 23,
     "name": "Nightcrawler",
     "img": "https://imgix.ranker.com/user_node_img/84/1679247/original/nightcrawler-comic-book-characters-photo-u11?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Nightcrawler or nightcrawlers may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 24,
     "name": "Colossus",
     "img": "https://imgix.ranker.com/user_node_img/38/758424/original/colossus-comic-book-characters-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Colossus, Colossos, or the plural Colossi or Colossuses, may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 25,
     "name": "Vision",
     "img": "https://imgix.ranker.com/user_node_img/118/2344305/original/vision-comic-book-characters-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Vision or The Vision may refer to:\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 26,
     "name": "Daredevil",
     "img": "https://imgix.ranker.com/node_img/41/814930/original/daredevil-comic-strips-photo-2?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Daredevil may refer to:\n\nA stunt performer\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 27,
@@ -165,7 +165,7 @@ export const HEROES: any[] = [
     "id": 28,
     "name": "Hawkeye",
     "img": "https://imgix.ranker.com/user_node_img/57/1138184/original/hawkeye-comic-book-characters-photo-u3?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Hawkeye may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 29,
@@ -201,13 +201,13 @@ export const HEROES: any[] = [
     "id": 34,
     "name": "Thing",
     "img": "https://imgix.ranker.com/node_img/112/2232647/original/thing-comic-book-characters-photo-1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Thing or The Thing may refer to:\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 35,
     "name": "Cable",
     "img": "https://imgix.ranker.com/user_node_img/135/2693063/original/cable-comic-book-characters-photo-u4?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Cable may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 36,
@@ -249,7 +249,7 @@ export const HEROES: any[] = [
     "id": 42,
     "name": "Quicksilver",
     "img": "https://imgix.ranker.com/user_node_img/93/1859872/original/quicksilver-u13?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Quicksilver may refer to:\n\nQuicksilver (metal), the chemical element mercury"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 43,
@@ -267,13 +267,13 @@ export const HEROES: any[] = [
     "id": 45,
     "name": "Captain Marvel",
     "img": "https://imgix.ranker.com/node_img/552/11036475/original/captain-marvel-comic-book-characters-photo-1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Captain Marvel may refer to:\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 46,
     "name": "Iceman",
     "img": "https://imgix.ranker.com/user_node_img/61/1206245/original/iceman-comic-book-characters-photo-u8?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Iceman, The Iceman, Ice Man, or Ice Men may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 47,
@@ -385,7 +385,7 @@ export const HEROES: any[] = [
     "id": 65,
     "name": "Iron Fist",
     "img": "https://imgix.ranker.com/user_node_img/62/1237219/original/iron-fist-comic-book-characters-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Iron Fist, Iron fist or Ironfist may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 66,
@@ -564,7 +564,7 @@ export const HEROES: any[] = [
     "id": 95,
     "name": "Sentry",
     "img": "https://imgix.ranker.com/node_img/101/2002949/original/sentry-comic-book-characters-photo-1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Sentry or The Sentry may refer to:\n\n"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 96,
@@ -576,7 +576,7 @@ export const HEROES: any[] = [
     "id": 97,
     "name": "Magik",
     "img": "https://imgix.ranker.com/node_img/75/1498971/original/magik-comic-book-characters-photo-1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Magik may refer to:"
+    "description": "Sorry, this Hero description are empty"
   },
   {
     "id": 98,
@@ -594,6 +594,6 @@ export const HEROES: any[] = [
     "id": 100,
     "name": "Spider-Girl",
     "img": "https://imgix.ranker.com/node_img/104/2075532/original/spider-girl-comic-book-characters-photo-1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&crop=faces&h=150&w=150",
-    "description": "Spider-Girl or Spidergirl may refer to: \n\nAnya Corazon, a Marvel Comics Latina superhero who originally called herself Araña.\nAshley Barton, a Marvel Comics supervillain and granddaughter of Spider-Man Peter Parker and daughter of Clint Barton from the Marvel's Wastelanders universe.\nMayday Parker, a Marvel Comics superhero and daughter of Spider-Man Peter Parker and Mary Jane Watson from the MC2 (Marvel Comics 2) universe.\nPetra Parker, an alternate universe superhero who appears in the Marvel Animation animated series Ultimate Spider-Man: Web-Warriors, voiced by Olivia Holt.\nSpider Girl (Sussa Paka), a DC Comics superhero"
+    "description": "Sorry, this Hero description are empty"
   }
 ]

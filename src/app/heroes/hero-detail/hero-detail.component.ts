@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Hero} from "../../shared/hero";
 import {HeroService} from "../../shared/hero.service";
+import {Hero} from "../../shared/hero";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-hero-detail',
@@ -9,21 +10,22 @@ import {HeroService} from "../../shared/hero.service";
   styleUrls: ['./hero-detail.component.scss'],
 })
 export class HeroDetailComponent implements OnInit {
-  hero!: Hero
+  @Input() hero!: Hero
 
-  constructor(private heroesDataMock: HeroService, private route: ActivatedRoute) {
+  constructor(private heroesService: HeroService,
+              private route: ActivatedRoute,
+              private location: Location) {
   }
 
   ngOnInit(): void {
     this.route.params.subscribe(res => {
-      this.heroesDataMock.getHero(+res['id']).subscribe(h => {
-        this.hero = h
-      })
-      if (this.hero.description?.search('may refer to') !== -1 ||
-        this.hero.description === undefined) {
-        this.hero.description = 'Sorry( This Hero does not description'
-      }
+      this.hero = this.heroesService.getHero(+res['id'])
     })
+  }
+
+  goBack() {
+    this.heroesService.isHeroDetail = this.location.isCurrentPathEqualTo('/heroes');
+    this.location.back()
   }
 
 }

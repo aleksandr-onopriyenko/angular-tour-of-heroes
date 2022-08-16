@@ -1,0 +1,11 @@
+<mat-toolbar class="mat-toolbar" color="primary"
+             style="display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <ng-content></ng-content>
+    <span style="margin-left: 2rem;">Tour of Heroes</span>
+  </div>
+  <div>
+    <a (click)="click()" mat-button routerLink="/heroes">Heroes</a>
+    <a mat-button routerLink="/dashboard">Dashboard</a>
+  </div>
+</mat-toolbar>

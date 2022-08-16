@@ -1,11 +1,21 @@
-<div class="wrapper">
-  <mat-card (click)="onSelect(hero.id)" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero"
-            [matTooltip]="hero.name.length > 15 ? hero.name : ''" class="hero-card"
-            matTooltipPosition="above" style="cursor:pointer;">
-    <mat-card-header style="width: 100%;">
-      <mat-card-title class="hero-card__title"
-      >{{ hero.name }}</mat-card-title>
-    </mat-card-header>
-    <img [alt]="hero.name" [src]="hero.img" class="hero-card__image" mat-card-image>
-  </mat-card>
-</div>
+<app-navbar>
+  <button (click)="sidenav.toggle()" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+</app-navbar>
+
+<mat-sidenav-container class="mat-drawer-side"
+                       style="width: 100%;">
+  <mat-sidenav class="mat-drawer-container" mode="side" opened>
+    <mat-selection-list [multiple]="false">
+      <mat-list-option (click)="onSelect(hero.id);" *ngFor="let hero of heroes"
+                       [value]="hero.name">
+        {{hero.name}}
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div *ngIf="isShown" class="choose-hero mat-h1">Choose Your Hero</div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
